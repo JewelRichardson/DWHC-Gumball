@@ -1,14 +1,18 @@
 :root {
   --darwin-glow: #f77c57f5;
+  --darwin-orange: #ff4500;
   --gumball-blue: #00bfff;
   --gumball-blue-light: #6fdbff;
-  --gumball-black: #000000;
-  --gumball-white: #ffffff;
+  --color-black: #000000;
+  --color-white: #ffffff;
+  --color-gray: gray;
   --gumball-pink: #dd0478;
   --gumball-orange: #ff4500;
   --gumball-light-pink: #eba1ad;
   --gumball-brown: #a52a2a;
   --gumball-brown-light: #aaf1aa;
+  --border-bold: 3px solid var(--color-black);
+  --border-semibold: 2px solid var(--color-black);
 }
 
 *,
@@ -42,16 +46,7 @@ body {
   border-bottom-right-radius: 86% 18%;
   border-bottom-left-radius: 30%;
   transform: rotate(-14deg);
-  background-color: orangered;
-  /* width: 280px;
-  height: 160px;
-  border: 2px solid black;
-  border-top-left-radius: 50% 80%;
-  border-top-right-radius: 50% 64%;
-  border-bottom-right-radius: 86% 18%;
-  border-bottom-left-radius: 30%;
-  transform: rotate(-14deg);
-  background-color: orangered; */
+  background-color: var(--darwin-orange);
 }
 .darwin__head--bottom {
   position: absolute;
@@ -65,17 +60,6 @@ body {
   border-bottom-right-radius: 37% 79%;
   border-bottom-left-radius: 48% 58%;
   transform: rotate(-3deg);
-  /* position: absolute;
-  top: 71px;
-  left: 16px;
-  width: 301px;
-  height: 140px;
-  border: 2px solid black;
-  border-top-left-radius: 34% 80%;
-  border-top-right-radius: 44% 60%;
-  border-bottom-right-radius: 37% 79%;
-  border-bottom-left-radius: 48% 58%;
-  transform: rotate(-1deg); */
 }
 
 .darwin__head--bottom::before {
@@ -90,7 +74,7 @@ body {
   border-top-right-radius: inherit;
   border-bottom-right-radius: inherit;
   border-bottom-left-radius: inherit;
-  background-color: orangered;
+  background-color: var(--darwin-orange);
 }
 .darwin__head--bottom::after {
   content: '';
@@ -104,7 +88,7 @@ body {
   border-top-right-radius: 34% 60%;
   border-bottom-right-radius: 37% 79%;
   border-bottom-left-radius: 41% 58%;
-  background-color: orangered;
+  background-color: var(--darwin-orange);
 }
 
 .darwin__eyebrow--1 {
@@ -113,11 +97,11 @@ body {
   left: 102px;
   width: 52px;
   height: 37px;
-  border: 10px solid var(--gumball-black);
+  border: 10px solid var(--color-black);
   z-index: 12;
   border-radius: 50%;
   border-color: transparent;
-  border-top-color: var(--gumball-black);
+  border-top-color: var(--color-black);
   transform: rotate(-15deg);
 }
 .darwin__eyebrow--1::before,
@@ -131,7 +115,7 @@ body {
 .darwin__eyebrow--1::before {
   width: 11px;
   height: 10px;
-  background-color: var(--gumball-black);
+  background-color: var(--color-black);
   border-radius: 50%;
   top: -6px;
   left: -4px;
@@ -140,7 +124,7 @@ body {
 .darwin__eyebrow--1::after {
   width: 11px;
   height: 10px;
-  background-color: var(--gumball-black);
+  background-color: var(--color-black);
   border-radius: 50%;
   top: -7px;
   right: -3px;
@@ -152,17 +136,17 @@ body {
   right: 47px;
   width: 50px;
   height: 37px;
-  border: 10px solid var(--gumball-black);
+  border: 10px solid var(--color-black);
   z-index: 12;
   border-radius: 50%;
   border-color: transparent;
-  border-top-color: var(--gumball-black);
+  border-top-color: var(--color-black);
   transform: rotate(13deg);
 }
 .darwin__eyebrow--2::before {
   width: 12px;
   height: 10px;
-  background-color: var(--gumball-black);
+  background-color: var(--color-black);
   border-radius: 50%;
   top: -6px;
   left: -4px;
@@ -171,7 +155,7 @@ body {
 .darwin__eyebrow--2::after {
   width: 12px;
   height: 10px;
-  background-color: var(--gumball-black);
+  background-color: var(--color-black);
   border-radius: 50%;
   top: -6px;
   right: -4px;
@@ -182,9 +166,9 @@ body {
   position: absolute;
   width: 87px;
   height: 87px;
-  border: 3px solid var(--gumball-black);
+  border: var(--border-bold);
   border-radius: 50%;
-  background-color: var(--gumball-white);
+  background-color: var(--color-white);
   z-index: 12;
 }
 .darwin__eye--1 {
@@ -196,7 +180,7 @@ body {
   content: '';
   width: 30px;
   height: 30px;
-  background-color: var(--gumball-black);
+  background-color: var(--color-black);
   border-radius: 50%;
   position: absolute;
   top: 50%;
@@ -273,13 +257,13 @@ body {
 .darwin__mouth::before {
   top: 78px;
   left: -16px;
-  background-color: orangered;
+  background-color: var(--darwin-orange);
   transform: rotate(135deg);
 }
 .darwin__mouth::after {
   top: 70px;
   right: -17px;
-  background-color: orangered;
+  background-color: var(--darwin-orange);
   transform: rotate(-51deg);
 }
 
@@ -289,7 +273,7 @@ body {
   left: 65px;
   width: 50px;
   height: 80px;
-  background-color: orangered;
+  background-color: var(--darwin-orange);
   /* border: 1px solid; */
   z-index: 14;
 }
@@ -299,7 +283,7 @@ body {
   right: -16px;
   width: 42px;
   height: 80px;
-  background-color: orangered;
+  background-color: var(--darwin-orange);
   /* border: 1px solid; */
   z-index: 14;
 }
@@ -359,32 +343,32 @@ body {
 }
 
 /* GUMBALL */
-.head {
+.gumball__head {
   position: relative;
   width: 269px;
   height: 200px;
-  border: 2px solid var(--gumball-black);
+  border: var(--border-bold);
   background: var(--gumball-blue);
   border-radius: 130px 130px 80px 50px / 115px 100px 116px 50px;
 }
 
-.ear-1,
-.ear-2 {
+.gumball__ear-1,
+.gumball__ear-2 {
   position: absolute;
   background-color: var(--gumball-blue);
-  border: 2px solid var(--gumball-black);
+  border: var(--border-bold);
   border-radius: 50%;
   z-index: -1;
 }
 
-.ear-1 {
+.gumball__ear-1 {
   top: -27px;
   left: 80px;
   width: 66px;
   height: 101px;
   transform: rotate(2deg);
 }
-.ear-2 {
+.gumball__ear-2 {
   top: -16px;
   left: 168px;
   width: 94px;
@@ -392,18 +376,18 @@ body {
   transform: rotate(46deg);
 }
 
-.face-1 {
+.gumball__face--1 {
   position: absolute;
   top: 103px;
   left: -48px;
   width: 262px;
   height: 112px;
-  border: 2px solid var(--gumball-black);
+  border: var(--border-bold);
   background-color: var(--gumball-blue);
   border-radius: 70px 50px 50px 56px / 70px 50px 50px 65px;
   z-index: -1;
 }
-.face-2 {
+.gumball__face--2 {
   position: absolute;
   top: 90px;
   right: 31px;
@@ -413,7 +397,7 @@ body {
   background-color: var(--gumball-blue);
   z-index: 10;
 }
-.face-3 {
+.gumball__face--3 {
   position: absolute;
   top: 73px;
   right: -20px;
@@ -421,46 +405,46 @@ body {
   height: 90px;
   border-radius: 57px 50px 71px 70px / 50px 50px 50px 54px;
   background-color: var(--gumball-blue);
-  border-bottom: 2px solid var(--gumball-black);
+  border-bottom: var(--border-bold);
   z-index: 10;
   transform: rotate(-68deg);
 }
-.face-4 {
+.gumball__face--4 {
   position: absolute;
   top: 116px;
   left: -43px;
   width: 257px;
   height: 119px;
-  border-bottom: 2px solid var(--gumball-black);
+  border-bottom: var(--border-bold);
   background-color: var(--gumball-blue);
   border-radius: 50%;
   z-index: 10;
 }
-.face-5 {
+.gumball__face--5 {
   position: absolute;
   top: 12px;
   left: 69px;
   width: 200px;
   height: 200px;
-  border-right: 2px solid var(--gumball-black);
+  border-right: var(--border-bold);
   background-color: var(--gumball-blue);
   border-radius: 50% 59% 60% 70% / 50% 80% 73% 54%;
   z-index: 10;
   transform: rotate(13deg);
 }
-.face-6 {
+.gumball__face--6 {
   position: absolute;
   top: 117px;
   left: 63px;
   width: 190px;
   height: 112px;
-  border-bottom: 2px solid var(--gumball-black);
+  border-bottom: var(--border-bold);
   background-color: var(--gumball-blue);
   border-radius: 70%;
   z-index: 11;
   transform: rotate(-15deg);
 }
-.face-6::before {
+.gumball__face--6::before {
   content: '';
   position: absolute;
   top: -20px;
@@ -471,7 +455,7 @@ body {
   background: var(--gumball-blue);
   transform: rotate(3deg);
 }
-.face-6::after {
+.gumball__face--6::after {
   content: '';
   position: absolute;
   top: -33px;
@@ -483,152 +467,152 @@ body {
   transform: rotate(-45deg);
 }
 
-.eyebrow-1 {
+.gumball__eyebrow-1 {
   position: absolute;
   top: 19px;
   left: 51px;
   width: 52px;
   height: 37px;
-  border: 10px solid var(--gumball-black);
+  border: 10px solid var(--color-black);
   z-index: 12;
   border-radius: 50%;
   border-color: transparent;
-  border-top-color: var(--gumball-black);
+  border-top-color: var(--color-black);
   transform: rotate(-20deg);
 }
-.eyebrow-1::before,
-.eyebrow-1::after,
-.eyebrow-2::before,
-.eyebrow-2::after {
+.gumball__eyebrow-1::before,
+.gumball__eyebrow-1::after,
+.gumball__eyebrow-2::before,
+.gumball__eyebrow-2::after {
   content: '';
   position: absolute;
 }
 
-.eyebrow-1::before {
+.gumball__eyebrow-1::before {
   width: 11px;
   height: 10px;
-  background-color: var(--gumball-black);
+  background-color: var(--color-black);
   border-radius: 50%;
   top: -6px;
   left: -4px;
   transform: rotate(-21deg);
 }
-.eyebrow-1::after {
+.gumball__eyebrow-1::after {
   width: 11px;
   height: 10px;
-  background-color: var(--gumball-black);
+  background-color: var(--color-black);
   border-radius: 50%;
   top: -7px;
   right: -3px;
   transform: rotate(11deg);
 }
-.eyebrow-2 {
+.gumball__eyebrow-2 {
   position: absolute;
   top: 23px;
   right: 36px;
   width: 57px;
   height: 37px;
-  border: 10px solid var(--gumball-black);
+  border: 10px solid var(--color-black);
   z-index: 12;
   border-radius: 50%;
   border-color: transparent;
-  border-top-color: var(--gumball-black);
+  border-top-color: var(--color-black);
   transform: rotate(24deg);
 }
-.eyebrow-2::before {
+.gumball__eyebrow-2::before {
   width: 12px;
   height: 10px;
-  background-color: var(--gumball-black);
+  background-color: var(--color-black);
   border-radius: 50%;
   top: -6px;
   left: -4px;
   transform: rotate(-21deg);
 }
-.eyebrow-2::after {
+.gumball__eyebrow-2::after {
   width: 12px;
   height: 10px;
-  background-color: var(--gumball-black);
+  background-color: var(--color-black);
   border-radius: 50%;
   top: -6px;
   right: -4px;
   transform: rotate(11deg);
 }
 
-.eyes [class^='eye-'] {
+.gumball__eyes [class^='gumball__eye-'] {
   position: absolute;
   width: 87px;
   height: 87px;
-  border: 2px solid var(--gumball-black);
+  border: var(--border-bold);
   border-radius: 50%;
-  background-color: var(--gumball-white);
+  background-color: var(--color-white);
   z-index: 12;
 }
-.eye-1 {
+.gumball__eye-1 {
   top: 58px;
   left: 22px;
 }
-.eye-1::before,
-.eye-2::before {
+.gumball__eye-1::before,
+.gumball__eye-2::before {
   content: '';
   width: 40px;
   height: 40px;
-  background-color: var(--gumball-black);
+  background-color: var(--color-black);
   border-radius: 50%;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.eye-2 {
+.gumball__eye-2 {
   top: 63px;
   right: 44px;
 }
 
-.whiskers [class^='whisker-'] {
+.gumball__whiskers [class^='gumball__whisker-'] {
   position: absolute;
   width: 6px;
-  background-color: var(--gumball-black);
+  background-color: var(--color-black);
   z-index: 12;
 }
-.whisker-1 {
+.gumball__whisker-1 {
   height: 35px;
   bottom: 15px;
   left: -34px;
   transform: rotate(61deg);
 }
-.whisker-2 {
+.gumball__whisker-2 {
   height: 35px;
-  bottom: -17px;
-  left: -12px;
+  bottom: -18px;
+  left: -14px;
   transform: rotate(49deg);
 }
-.whisker-3 {
+.gumball__whisker-3 {
   height: 29px;
-  bottom: -21px;
+  bottom: -23px;
   right: 68px;
   transform: rotate(-36deg);
 }
-.whisker-4 {
+.gumball__whisker-4 {
   height: 29px;
-  bottom: -3px;
+  bottom: -4px;
   right: 40px;
   transform: rotate(-43deg);
 }
-.whisker-5 {
+.gumball__whisker-5 {
   height: 29px;
   bottom: 25px;
   right: 18px;
   transform: rotate(-56deg);
 }
 
-.top-mouth {
+.gumball__mouth--top {
   position: absolute;
   width: 46px;
   height: 22px;
   left: 81px;
   bottom: 35px;
   background: var(--gumball-blue-light);
-  border: 2px solid var(--gumball-black);
+  border: var(--border-semibold);
   border-top-left-radius: 50%;
   border-bottom-left-radius: 50%;
   border-top-right-radius: 6% 4%;
@@ -637,36 +621,36 @@ body {
   transform: rotate(60deg) skew(28deg, 127deg) scaleY(1.2);
   overflow: hidden;
 }
-.top-mouth::before,
-.top-mouth::after {
+.gumball__mouth--top::before,
+.gumball__mouth--top::after {
   content: '';
   position: absolute;
   z-index: 12;
 }
-.top-mouth::before {
+.gumball__mouth--top::before {
   width: 21px;
   height: 14px;
   left: 5px;
   top: -5px;
-  border: 2px solid var(--gumball-black);
+  border: var(--border-semibold);
   background-color: var(--gumball-orange);
   border-radius: 50%;
 }
-.top-mouth::after {
+.gumball__mouth--top::after {
   width: 2px;
   height: 17px;
-  background-color: var(--gumball-black);
+  background-color: var(--color-black);
   top: 7px;
   left: 15px;
   transform: rotate(2deg);
 }
-.lower-mouth {
+.gumball__mouth--lower {
   position: absolute;
   width: 76px;
   height: 70px;
   left: 70px;
   bottom: -17px;
-  border: 2px solid var(--gumball-black);
+  border: var(--border-bold);
   border-bottom-left-radius: 70% 100%;
   border-bottom-right-radius: 70% 100%;
   background-color: var(--gumball-pink);
@@ -674,111 +658,111 @@ body {
   overflow: hidden;
   z-index: 12;
 }
-.lower-mouth::before,
-.lower-mouth::after {
+.gumball__mouth--lower::before,
+.gumball__mouth--lower::after {
   content: '';
   position: absolute;
   z-index: 12;
 }
-.lower-mouth::before {
+.gumball__mouth--lower::before {
   width: 20px;
   height: 32px;
-  border: 2px solid var(--gumball-black);
-  background-color: var(--gumball-white);
+  border: var(--border-bold);
+  background-color: var(--color-white);
   border-radius: 50%;
   top: -12px;
   right: -6px;
   transform: rotate(-11deg);
 }
-.lower-mouth::after {
+.gumball__mouth--lower::after {
   width: 50px;
   height: 50px;
   top: 23px;
   right: 0;
-  border: 2px solid var(--gumball-black);
+  border: var(--border-semibold);
   border-top-left-radius: 100% 88%;
   background-color: var(--gumball-light-pink);
   transform: rotate(10deg);
 }
 
-.neck {
+.gumball__neck {
   position: absolute;
   width: 60px;
   height: 15px;
   top: 233px;
   left: 86px;
-  border-left: 2px solid var(--gumball-black);
-  border-right: 2px solid var(--gumball-black);
+  border-left: var(--border-bold);
+  border-right: var(--border-bold);
   background-color: var(--gumball-blue);
   z-index: 14;
 }
 
-.body {
+.gumball__body {
   position: absolute;
   width: 60px;
   height: 93px;
   top: 248px;
   left: 86px;
-  border-left: 2px solid var(--gumball-black);
-  border-right: 2px solid var(--gumball-black);
+  border-left: var(--border-bold);
+  border-right: var(--border-bold);
   background-color: var(--gumball-blue);
   z-index: 14;
 }
 
-.shirt {
+.gumball__shirt {
   height: inherit;
   background-color: var(--gumball-brown-light);
 }
 
-.shirt-collar {
+.gumball__shirt-collar {
   position: relative;
   width: inherit;
   height: 20px;
   background-color: var(--gumball-brown);
-  border-top: 2px solid var(--gumball-black);
-  border-bottom: 2px solid var(--gumball-black);
+  border-top: var(--border-bold);
+  border-bottom: var(--border-bold);
   transform: skewY(-2deg);
   z-index: 16;
 }
 
-.waist {
+.gumball__waist {
   position: absolute;
   top: 341px;
   left: 66px;
   width: 100px;
   height: 30px;
-  border: 2px solid var(--gumball-black);
+  border: var(--border-bold);
   border-bottom-left-radius: 23% 83%;
   border-bottom-right-radius: 23% 83%;
-  background-color: gray;
+  background-color: var(--color-gray);
   box-shadow: inset 0 -5px 5px rgb(0 0 0 / 40%);
 }
 
-.arm-1,
-.arm-2 {
+.gumball__arm-1,
+.gumball__arm-2 {
   position: absolute;
-  border: 2px solid var(--gumball-black);
+  border: var(--border-bold);
   border-top-left-radius: 45% 10%;
   border-top-right-radius: 45% 10%;
   border-bottom-left-radius: 45% 10%;
   border-bottom-right-radius: 45% 10%;
   background-color: var(--gumball-brown-light);
 }
-.arm-1--upper {
+.gumball__arm-1--upper {
   top: 229px;
   left: 47px;
   width: 20px;
   height: 83px;
   transform: rotate(50deg);
 }
-.arm-2--upper {
+.gumball__arm-2--upper {
   top: 229px;
   right: 86px;
   width: 20px;
   height: 83px;
   transform: rotate(-50deg);
 }
-.arm-1-joint {
+.gumball__arm-1-joint {
   position: absolute;
   top: 282px;
   left: 25px;
@@ -788,7 +772,7 @@ body {
   background-color: var(--gumball-brown-light);
   z-index: 16;
 }
-.arm-2-joint {
+.gumball__arm-2-joint {
   position: absolute;
   top: 280px;
   right: 66px;
@@ -798,14 +782,14 @@ body {
   background-color: var(--gumball-brown-light);
   z-index: 16;
 }
-.arm-1--lower {
+.gumball__arm-1--lower {
   top: 283px;
   left: 37px;
   width: 23px;
   height: 48px;
   transform: rotate(-41deg);
 }
-.arm-2--lower {
+.gumball__arm-2--lower {
   top: 283px;
   right: 76px;
   width: 23px;
@@ -813,53 +797,53 @@ body {
   transform: rotate(41deg);
 }
 
-.sleeve-end {
+.gumball__sleeve-end {
   position: absolute;
   left: -1px;
   width: 21px;
   height: 23px;
   background-color: var(--gumball-brown);
-  border: 2px solid var(--gumball-black);
+  border: var(--border-bold);
 }
-.sleeve-end-1 {
+.gumball__sleeve-end--1 {
   bottom: -2px;
   transform: skewY(4deg);
 }
-.sleeve-end-1::before,
-.sleeve-end-1::after,
-.sleeve-end-2::before,
-.sleeve-end-2::after {
+.gumball__sleeve-end--1::before,
+.gumball__sleeve-end--1::after,
+.gumball__sleeve-end--2::before,
+.gumball__sleeve-end--2::after {
   content: '';
   position: absolute;
   height: 100%;
   width: 3px;
-  background-color: var(--gumball-black);
+  background-color: var(--color-black);
 }
-.sleeve-end-1::before,
-.sleeve-end-2::before {
+.gumball__sleeve-end--1::before,
+.gumball__sleeve-end--2::before {
   left: 3px;
 }
-.sleeve-end-1::after,
-.sleeve-end-2::after {
+.gumball__sleeve-end--1::after,
+.gumball__sleeve-end--2::after {
   right: 3px;
 }
-.sleeve-end-2 {
+.gumball__sleeve-end--2 {
   bottom: -1px;
   transform: skewY(4deg);
 }
 
-.paw-1 .wrist {
+.gumball__paw-1 .gumball__wrist {
   position: absolute;
   left: 53px;
   top: 320px;
   width: 21px;
   height: 9px;
-  border: 2px solid var(--gumball-black);
+  border: var(--border-bold);
   transform: rotate(-44deg);
   z-index: 18;
   background-color: var(--gumball-blue);
 }
-.paw-1 .wrist-joint {
+.gumball__paw-1 .gumball__wrist-joint {
   position: absolute;
   top: 320px;
   left: 59px;
@@ -870,37 +854,37 @@ body {
   z-index: 20;
   transform: rotate(-40deg);
 }
-.paw-1 .main-paw {
+.gumball__paw-1 .gumball__main-paw {
   position: absolute;
   left: 53px;
   top: 321px;
   width: 40px;
   height: 30px;
-  border: 2px solid var(--gumball-black);
+  border: var(--border-bold);
   border-radius: 50%;
   background-color: var(--gumball-blue);
   z-index: 16;
   transform: rotate(-35deg);
 }
-.paw-1 .main-paw::before,
-.paw-1 .main-paw::after {
+.gumball__paw-1 .gumball__main-paw::before,
+.gumball__paw-1 .gumball__main-paw::after {
   content: '';
   position: absolute;
   width: 3px;
   bottom: 0px;
-  background-color: var(--gumball-black);
+  background-color: var(--color-black);
 }
-.paw-1 .main-paw::before {
+.gumball__paw-1 .gumball__main-paw::before {
   height: 11px;
   left: 10px;
   transform: rotate(4deg);
 }
-.paw-1 .main-paw::after {
+.gumball__paw-1 .gumball__main-paw::after {
   height: 13px;
   right: 12px;
   transform: rotate(-4deg);
 }
-.thumb-1 {
+.gumball__thumb-1 {
   position: absolute;
   top: 310px;
   left: 73px;
@@ -908,26 +892,26 @@ body {
   height: 13px;
   border-top-left-radius: 80% 146%;
   border-top-right-radius: 80% 80%;
-  border-top: 2px solid var(--gumball-black);
-  border-right: 2px solid var(--gumball-black);
-  border-left: 2px solid var(--gumball-black);
+  border-top: var(--border-bold);
+  border-right: var(--border-bold);
+  border-left: var(--border-bold);
   background-color: var(--gumball-blue);
   transform: rotate(20deg);
   z-index: 12;
 }
 
-.paw-2 .wrist {
+.gumball__paw-2 .gumball__wrist {
   position: absolute;
   right: 95px;
   top: 322px;
   width: 21px;
   height: 9px;
-  border: 2px solid var(--gumball-black);
+  border: var(--border-bold);
   transform: rotate(44deg);
   z-index: 18;
   background-color: var(--gumball-blue);
 }
-.paw-2 .wrist-joint {
+.gumball__paw-2 .gumball__wrist-joint {
   position: absolute;
   top: 323px;
   right: 98px;
@@ -938,37 +922,37 @@ body {
   transform: rotate(59deg);
   z-index: 20;
 }
-.paw-2 .main-paw {
+.gumball__paw-2 .gumball__main-paw {
   position: absolute;
   right: 95px;
   top: 321px;
   width: 40px;
   height: 30px;
-  border: 2px solid var(--gumball-black);
+  border: var(--border-bold);
   border-radius: 50%;
   background-color: var(--gumball-blue);
   z-index: 16;
   transform: rotate(35deg);
 }
-.paw-2 .main-paw::before,
-.paw-2 .main-paw::after {
+.gumball__paw-2 .gumball__main-paw::before,
+.gumball__paw-2 .gumball__main-paw::after {
   content: '';
   position: absolute;
   width: 3px;
   bottom: 0px;
-  background-color: var(--gumball-black);
+  background-color: var(--color-black);
 }
-.paw-2 .main-paw::before {
+.gumball__paw-2 .gumball__main-paw::before {
   height: 11px;
   left: 10px;
   transform: rotate(4deg);
 }
-.paw-2 .main-paw::after {
+.gumball__paw-2 .gumball__main-paw::after {
   height: 13px;
   right: 12px;
   transform: rotate(8deg);
 }
-.thumb-2 {
+.gumball__thumb-2 {
   position: absolute;
   top: 310px;
   right: 113px;
@@ -976,59 +960,57 @@ body {
   height: 13px;
   border-top-left-radius: 80% 146%;
   border-top-right-radius: 80% 80%;
-  border-top: 2px solid var(--gumball-black);
-  border-right: 2px solid var(--gumball-black);
-  border-left: 2px solid var(--gumball-black);
+  border-top: var(--border-bold);
+  border-right: var(--border-bold);
+  border-left: var(--border-bold);
   background-color: var(--gumball-blue);
   transform: rotate(-27deg);
   z-index: 12;
 }
 
-.leg-1,
-.leg-2 {
+.gumball__leg-1,
+.gumball__leg-2 {
   height: 51px; /*69px;*/
-  background-color: gray;
+  background-color: var(--color-gray);
   box-shadow: inset 0 8px 3px rgb(0 0 0 / 40%);
 }
-.leg-1 {
+.gumball__leg-1 {
   position: absolute;
   top: 370px;
   left: 95px;
   width: 25px;
-  border: 2px solid var(--gumball-black);
+  border: var(--border-bold);
   transform: skew(6deg, 0deg);
-  border-right: 3px solid var(--gumball-black);
 }
-.leg-2 {
+.gumball__leg-2 {
   position: absolute;
   top: 370px;
   right: 126px;
   width: 25px;
-  border: 2px solid var(--gumball-black);
+  border: var(--border-bold);
   transform: skewX(6deg);
-  border-left: 3px solid var(--gumball-black);
 }
-.leg-1::before,
-.leg-2::before {
+.gumball__leg-1::before,
+.gumball__leg-2::before {
   content: '';
   position: absolute;
-  border: 2.5px solid var(--gumball-black);
+  border: var(--border-bold);
   height: 20px;
   bottom: -9px;
   width: 24px;
   background-color: var(--gumball-brown-light);
 }
-.leg-1::before {
-  left: -2px;
+.gumball__leg-1::before {
+  left: -3px;
   transform: skewY(2deg);
 }
-.leg-2::before {
-  right: -2px;
+.gumball__leg-2::before {
+  right: -3px;
   transform: skewY(-4deg);
 }
 
-.leg-1::after,
-.leg-2::after {
+.gumball__leg-1::after,
+.gumball__leg-2::after {
   position: absolute;
   content: '';
   width: 100%;
@@ -1037,63 +1019,63 @@ body {
   border-top-right-radius: 50% 10%;
   top: 6px;
   left: 0;
-  background-color: gray;
+  background-color: var(--color-gray);
   transform: skewY(-4deg);
 }
 
-.foot-1,
-.foot-2 {
+.gumball__foot-1,
+.gumball__foot-2 {
   position: absolute;
   top: 426px;
-  border: 2px solid var(--gumball-black);
+  border: var(--border-bold);
   background-color: var(--gumball-blue);
   width: 40px;
   height: 24px;
   overflow: hidden;
 }
-.foot-1 {
+.gumball__foot-1 {
   left: 82px;
   border-top-left-radius: 90% 75%;
   border-bottom-left-radius: 37% 60%;
   border-bottom-right-radius: 30% 50%;
 }
-.foot-2 {
+.gumball__foot-2 {
   right: 107px;
   border-top-right-radius: 90% 75%;
   border-bottom-right-radius: 37% 60%;
   border-bottom-left-radius: 30% 50%;
 }
-.foot-1::before,
-.foot-2::before,
-.foot-1::after,
-.foot-2::after {
+.gumball__foot-1::before,
+.gumball__foot-2::before,
+.gumball__foot-1::after,
+.gumball__foot-2::after {
   content: '';
   position: absolute;
-  border-top: 3px solid var(--gumball-black);
+  border-top: var(--border-bold);
   border-radius: 50%;
 }
-.foot-1::before {
+.gumball__foot-1::before {
   width: 20px;
   height: 10px;
   left: -4px;
   bottom: -3px;
   transform: rotate(-53deg);
 }
-.foot-1::after {
+.gumball__foot-1::after {
   width: 20px;
   height: 10px;
   left: 9px;
   bottom: -3px;
   transform: rotate(-45deg);
 }
-.foot-2::before {
+.gumball__foot-2::before {
   width: 20px;
   height: 10px;
   right: -4px;
   bottom: -3px;
   transform: rotate(53deg);
 }
-.foot-2::after {
+.gumball__foot-2::after {
   width: 20px;
   height: 10px;
   right: 9px;
