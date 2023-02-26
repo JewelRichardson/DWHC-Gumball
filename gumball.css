@@ -1,3 +1,4 @@
+/* By Jewel Richardson | github.com/JewelRichardson */
 :root {
   --color-black: #000000;
   --color-white: #ffffff;
@@ -23,10 +24,14 @@
 *::after {
   box-sizing: border-box;
 }
+*::before,
+*::after {
+  content: '';
+  position: absolute;
+}
 
 body {
   display: flex;
-  /* align-items: center; */
   padding-top: 6rem;
   justify-content: center;
   min-height: 100vh;
@@ -74,7 +79,7 @@ body {
   top: 83px;
   left: 15px;
   width: 322px;
-  height: 147px; /*140px;*/
+  height: 147px;
   border: 3px solid black;
   border-top-left-radius: 34% 80%;
   border-top-right-radius: 44% 60%;
@@ -82,15 +87,12 @@ body {
   border-bottom-left-radius: 48% 58%;
   transform: rotate(-3deg);
 }
-
 .darwin__head--bottom::before {
-  content: '';
-  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   z-index: 12;
-  top: 0;
-  left: 0;
   border-top-left-radius: inherit;
   border-top-right-radius: inherit;
   border-bottom-right-radius: inherit;
@@ -98,11 +100,9 @@ body {
   background-color: var(--darwin-orange);
 }
 .darwin__head--bottom::after {
-  content: '';
-  position: absolute;
-  z-index: 12;
   top: -14px;
   left: -4px;
+  z-index: 12;
   width: 94%;
   height: 91%;
   border-top-left-radius: 39% 80%;
@@ -125,32 +125,6 @@ body {
   border-top-color: var(--color-black);
   transform: rotate(-12deg);
 }
-.darwin__eyebrow--1::before,
-.darwin__eyebrow--1::after,
-.darwin__eyebrow--2::before,
-.darwin__eyebrow--2::after {
-  content: '';
-  position: absolute;
-}
-
-.darwin__eyebrow--1::before {
-  width: 11px;
-  height: 10px;
-  background-color: var(--color-black);
-  border-radius: 50%;
-  top: -6px;
-  left: -4px;
-  transform: rotate(-21deg);
-}
-.darwin__eyebrow--1::after {
-  width: 11px;
-  height: 10px;
-  background-color: var(--color-black);
-  border-radius: 50%;
-  top: -7px;
-  right: -3px;
-  transform: rotate(11deg);
-}
 .darwin__eyebrow--2 {
   position: absolute;
   top: 7px;
@@ -164,20 +138,31 @@ body {
   border-top-color: var(--color-black);
   transform: rotate(8deg);
 }
-.darwin__eyebrow--2::before {
-  width: 12px;
+.darwin__eyebrow--1::before,
+.darwin__eyebrow--1::after,
+.darwin__eyebrow--2::before,
+.darwin__eyebrow--2::after {
+  width: 11px;
   height: 10px;
   background-color: var(--color-black);
   border-radius: 50%;
+}
+.darwin__eyebrow--1::before {
+  top: -6px;
+  left: -4px;
+  transform: rotate(-21deg);
+}
+.darwin__eyebrow--1::after {
+  top: -7px;
+  right: -3px;
+  transform: rotate(11deg);
+}
+.darwin__eyebrow--2::before {
   top: -6px;
   left: -4px;
   transform: rotate(-21deg);
 }
 .darwin__eyebrow--2::after {
-  width: 12px;
-  height: 10px;
-  background-color: var(--color-black);
-  border-radius: 50%;
   top: -6px;
   right: -4px;
   transform: rotate(11deg);
@@ -198,7 +183,6 @@ body {
 }
 .darwin__eye--1::before,
 .darwin__eye--2::before {
-  content: '';
   width: 27px;
   height: 27px;
   background-color: var(--color-black);
@@ -219,7 +203,7 @@ body {
   left: 6px;
   width: 3px;
   height: 12px;
-  background-color: black;
+  background-color: var(--color-black);
   transform: rotate(-46deg);
 }
 .darwin__eye--1 .darwin__eye-lash--2 {
@@ -228,10 +212,9 @@ body {
   left: -1px;
   width: 3px;
   height: 9px;
-  background-color: black;
+  background-color: var(--color-black);
   transform: rotate(-62deg);
 }
-
 .darwin__eye--2 .darwin__eye-lash--1 {
   position: absolute;
   top: -2px;
@@ -241,7 +224,6 @@ body {
   background-color: black;
   transform: rotate(43deg);
 }
-
 .darwin__eye--2 .darwin__eye-lash--2 {
   position: absolute;
   top: 6px;
@@ -256,7 +238,6 @@ body {
   position: absolute;
   top: 62px;
   left: 108px;
-  /* border-radius: 50%; */
   border-bottom-left-radius: 50% 56%;
   border-bottom-right-radius: 50% 69%;
   border-bottom: 3px solid black;
@@ -266,8 +247,6 @@ body {
 }
 .darwin__mouth::before,
 .darwin__mouth::after {
-  content: '';
-  position: absolute;
   width: 50px;
   height: 50px;
   border: 3px solid black;
@@ -295,7 +274,6 @@ body {
   width: 50px;
   height: 80px;
   background-color: var(--darwin-orange);
-  /* border: 1px solid; */
   z-index: 14;
 }
 .darwin__glow--2 {
@@ -305,31 +283,22 @@ body {
   width: 42px;
   height: 80px;
   background-color: var(--darwin-orange);
-  /* border: 1px solid; */
   z-index: 14;
 }
 .darwin__glow--1::before,
-.darwin__glow--2::before,
-.darwin__glow--3::before,
-.darwin__glow--3::after {
-  content: '';
-  position: absolute;
-}
-.darwin__glow--1::before {
-  width: 28px;
-  height: 28px;
-  top: 26px;
-  right: -9px;
-  border-radius: 50%;
-  background-color: var(--darwin-glow);
-}
 .darwin__glow--2::before {
   width: 28px;
   height: 28px;
-  top: 36px;
-  left: -15px;
   border-radius: 50%;
   background-color: var(--darwin-glow);
+}
+.darwin__glow--1::before {
+  top: 26px;
+  right: -9px;
+}
+.darwin__glow--2::before {
+  top: 36px;
+  left: -15px;
 }
 .darwin__glow--3 {
   position: absolute;
@@ -337,29 +306,28 @@ body {
   left: 50px;
   width: 52px;
   height: 37px;
-  border: 10px solid var(--darwin-glow);
+  border: 10px solid transparent;
+  border-top-color: var(--darwin-glow);
   z-index: 12;
   border-radius: 50%;
-  border-color: transparent;
-  border-top-color: var(--darwin-glow);
   transform: rotate(-53deg) scale(2, 2.3);
 }
 .darwin__glow--3::before {
+  top: -6px;
+  left: -4px;
   width: 11px;
   height: 10px;
   background-color: var(--darwin-glow);
   border-radius: 50%;
-  top: -6px;
-  left: -4px;
   transform: rotate(-21deg);
 }
 .darwin__glow--3::after {
+  top: -7px;
+  right: -3px;
   width: 11px;
   height: 10px;
   background-color: var(--darwin-glow);
   border-radius: 50%;
-  top: -7px;
-  right: -3px;
   transform: rotate(11deg);
 }
 
@@ -377,8 +345,6 @@ body {
 }
 .darwin__tail-fin::before,
 .darwin__tail-fin::after {
-  content: '';
-  position: absolute;
   border-top: var(--border-bold);
   border-radius: 40%;
 }
@@ -412,10 +378,10 @@ body {
   position: absolute;
 }
 .darwin__arm-1 {
-  width: 57px;
-  height: 49px;
   top: 213px;
   left: 36px;
+  width: 57px;
+  height: 49px;
   background-color: var(--darwin-orange);
   border: var(--border-bold);
   border-top-color: var(--darwin-orange);
@@ -423,18 +389,11 @@ body {
   transform: rotate(51deg);
   z-index: 12;
 }
-.darwin__arm-1::before,
-.darwin__arm-1::after,
-.darwin__arm-2::before,
-.darwin__arm-2::after {
-  content: '';
-  position: absolute;
-}
 .darwin__arm-1::before {
-  width: 49px;
-  height: 54px;
   top: -37px;
   left: 27px;
+  width: 49px;
+  height: 54px;
   background-color: var(--darwin-orange);
   border: var(--border-bold);
   border-top-color: var(--darwin-orange);
@@ -443,36 +402,36 @@ body {
   z-index: 12;
 }
 .darwin__arm-1::after {
+  top: -1px;
+  left: 51px;
   width: 22px;
   height: 31px;
   border-radius: 56px 66px 14px 38px / 80px 68px 25px 3px;
   border: var(--border-bold);
   background-color: var(--darwin-orange);
-  top: -1px;
-  left: 51px;
   border-bottom: none;
   transform: rotate(186deg);
   z-index: 12;
 }
 
 .darwin__arm-2 {
+  top: 208px;
+  right: 5px;
   width: 36px;
   height: 50px;
   border-radius: 50%;
   border: var(--border-bold);
   background-color: var(--darwin-orange);
-  top: 208px;
-  right: 5px;
   border-bottom: none;
   transform: rotate(146deg) skew(20deg, 20deg);
   z-index: 8;
 }
 
 .darwin__arm-2::before {
-  width: 74px;
-  height: 39px;
   top: 15px;
   right: 14px;
+  width: 74px;
+  height: 39px;
   background-color: var(--darwin-orange);
   border: var(--border-bold);
   border-top-color: var(--darwin-orange);
@@ -501,8 +460,6 @@ body {
 }
 .darwin__leg-1::before,
 .darwin__leg-2::before {
-  content: '';
-  position: absolute;
   bottom: -2px;
   left: -3px;
   width: 40px;
@@ -513,8 +470,6 @@ body {
 }
 .darwin__leg-1::after,
 .darwin__leg-2::after {
-  content: '';
-  position: absolute;
   bottom: -43px;
   left: -3px;
   width: 40px;
@@ -528,45 +483,26 @@ body {
 .darwin__shoe-2 {
   position: absolute;
   overflow: hidden;
-  /* top: 416px; */
   top: 391px;
   width: 110px;
   height: 64px;
   border: var(--border-bold);
   background-color: var(--darwin-green-light);
 }
-
 .darwin__shoe-1 {
   left: 62px;
   border-top-left-radius: 50% 75%;
   border-top-right-radius: 77% 36%;
   border-bottom-left-radius: 37% 60%;
   border-bottom-right-radius: 30% 50%;
-  /* left: 64px;
-  border-top-left-radius: 50% 75%;
-  border-bottom-left-radius: 37% 60%;
-  border-bottom-right-radius: 30% 50%; */
 }
-
 .darwin__shoe-2 {
   right: 15px;
   border-top-right-radius: 50% 75%;
   border-top-left-radius: 77% 36%;
   border-bottom-right-radius: 37% 60%;
   border-bottom-left-radius: 30% 50%;
-  /* right: 14px;
-  border-top-right-radius: 50% 75%;
-  border-bottom-right-radius: 37% 60%;
-  border-bottom-left-radius: 30% 50%; */
 }
-.darwin__shoe-1::before,
-.darwin__shoe-1::after,
-.darwin__shoe-2::before,
-.darwin__shoe-2::after {
-  content: '';
-  position: absolute;
-}
-
 .darwin__shoe-1::before {
   top: -10px;
   right: -11px;
@@ -585,8 +521,8 @@ body {
   background-color: var(--darwin-green-dark);
   transform: skewX(-26deg);
 }
-.darwin__shoe-hole-1,
-.darwin__shoe-hole-2 {
+.darwin__shoe-hole--1,
+.darwin__shoe-hole--2 {
   position: absolute;
   top: 381px;
   width: 20px;
@@ -596,26 +532,24 @@ body {
   border-radius: 50%;
   z-index: 16;
 }
-.darwin__shoe-hole-1 {
+.darwin__shoe-hole--1 {
   left: 146px;
 }
-.darwin__shoe-hole-2 {
+.darwin__shoe-hole--2 {
   right: 97px;
 }
-.darwin__shoe-hole-1::after,
-.darwin__shoe-hole-2::after {
-  content: '';
-  position: absolute;
+.darwin__shoe-hole--1::after,
+.darwin__shoe-hole--2::after {
   top: 11px;
   width: 20px;
   height: 20px;
   background-color: var(--darwin-green-dark);
   z-index: 12;
 }
-.darwin__shoe-hole-1::after {
+.darwin__shoe-hole--1::after {
   left: -25px;
 }
-.darwin__shoe-hole-2::after {
+.darwin__shoe-hole--2::after {
   right: -25px;
 }
 
@@ -637,7 +571,6 @@ body {
   border-radius: 50%;
   z-index: -1;
 }
-
 .gumball__ear-1 {
   top: -27px;
   left: 80px;
@@ -653,6 +586,15 @@ body {
   transform: rotate(46deg);
 }
 
+.gumball__face--1,
+.gumball__face--2,
+.gumball__face--3,
+.gumball__face--4,
+.gumball__face--5,
+.gumball__face--6 {
+  background-color: var(--gumball-blue);
+  z-index: 10;
+}
 .gumball__face--1 {
   position: absolute;
   top: 103px;
@@ -660,9 +602,7 @@ body {
   width: 262px;
   height: 112px;
   border: var(--border-bold);
-  background-color: var(--gumball-blue);
   border-radius: 70px 50px 50px 56px / 70px 50px 50px 65px;
-  z-index: -1;
 }
 .gumball__face--2 {
   position: absolute;
@@ -671,8 +611,6 @@ body {
   width: 250px;
   height: 111px;
   border-radius: 57px 50px 100px 100px / 50px 50px 50px 50px;
-  background-color: var(--gumball-blue);
-  z-index: 10;
 }
 .gumball__face--3 {
   position: absolute;
@@ -681,9 +619,7 @@ body {
   width: 128px;
   height: 90px;
   border-radius: 57px 50px 71px 70px / 50px 50px 50px 54px;
-  background-color: var(--gumball-blue);
   border-bottom: var(--border-bold);
-  z-index: 10;
   transform: rotate(-68deg);
 }
 .gumball__face--4 {
@@ -693,9 +629,7 @@ body {
   width: 257px;
   height: 119px;
   border-bottom: var(--border-bold);
-  background-color: var(--gumball-blue);
   border-radius: 50%;
-  z-index: 10;
 }
 .gumball__face--5 {
   position: absolute;
@@ -704,9 +638,7 @@ body {
   width: 200px;
   height: 200px;
   border-right: var(--border-bold);
-  background-color: var(--gumball-blue);
   border-radius: 50% 59% 60% 70% / 50% 80% 73% 54%;
-  z-index: 10;
   transform: rotate(13deg);
 }
 .gumball__face--6 {
@@ -716,14 +648,10 @@ body {
   width: 190px;
   height: 112px;
   border-bottom: var(--border-bold);
-  background-color: var(--gumball-blue);
   border-radius: 70%;
-  z-index: 11;
   transform: rotate(-15deg);
 }
 .gumball__face--6::before {
-  content: '';
-  position: absolute;
   top: -20px;
   left: -42px;
   border-radius: inherit;
@@ -733,8 +661,6 @@ body {
   transform: rotate(3deg);
 }
 .gumball__face--6::after {
-  content: '';
-  position: absolute;
   top: -33px;
   right: -39px;
   border-radius: inherit;
@@ -757,32 +683,6 @@ body {
   border-top-color: var(--color-black);
   transform: rotate(-20deg);
 }
-.gumball__eyebrow-1::before,
-.gumball__eyebrow-1::after,
-.gumball__eyebrow-2::before,
-.gumball__eyebrow-2::after {
-  content: '';
-  position: absolute;
-}
-
-.gumball__eyebrow-1::before {
-  width: 11px;
-  height: 10px;
-  background-color: var(--color-black);
-  border-radius: 50%;
-  top: -6px;
-  left: -4px;
-  transform: rotate(-21deg);
-}
-.gumball__eyebrow-1::after {
-  width: 11px;
-  height: 10px;
-  background-color: var(--color-black);
-  border-radius: 50%;
-  top: -7px;
-  right: -3px;
-  transform: rotate(11deg);
-}
 .gumball__eyebrow-2 {
   position: absolute;
   top: 23px;
@@ -796,20 +696,31 @@ body {
   border-top-color: var(--color-black);
   transform: rotate(24deg);
 }
-.gumball__eyebrow-2::before {
-  width: 12px;
-  height: 10px;
-  background-color: var(--color-black);
-  border-radius: 50%;
-  top: -6px;
-  left: -4px;
-  transform: rotate(-21deg);
-}
+.gumball__eyebrow-1::before,
+.gumball__eyebrow-1::after,
+.gumball__eyebrow-2::before,
 .gumball__eyebrow-2::after {
   width: 12px;
   height: 10px;
   background-color: var(--color-black);
   border-radius: 50%;
+}
+.gumball__eyebrow-1::before {
+  top: -6px;
+  left: -4px;
+  transform: rotate(-21deg);
+}
+.gumball__eyebrow-1::after {
+  top: -7px;
+  right: -3px;
+  transform: rotate(11deg);
+}
+.gumball__eyebrow-2::before {
+  top: -6px;
+  left: -4px;
+  transform: rotate(-21deg);
+}
+.gumball__eyebrow-2::after {
   top: -6px;
   right: -4px;
   transform: rotate(11deg);
@@ -828,9 +739,12 @@ body {
   top: 58px;
   left: 22px;
 }
+.gumball__eye-2 {
+  top: 63px;
+  right: 44px;
+}
 .gumball__eye-1::before,
 .gumball__eye-2::before {
-  content: '';
   width: 40px;
   height: 40px;
   background-color: var(--color-black);
@@ -839,10 +753,6 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-}
-.gumball__eye-2 {
-  top: 63px;
-  right: 44px;
 }
 
 .gumball__whiskers [class^='gumball__whisker-'] {
@@ -898,10 +808,24 @@ body {
   transform: rotate(60deg) skew(28deg, 127deg) scaleY(1.2);
   overflow: hidden;
 }
-.gumball__mouth--top::before,
-.gumball__mouth--top::after {
-  content: '';
+.gumball__mouth--lower {
   position: absolute;
+  width: 76px;
+  height: 70px;
+  left: 70px;
+  bottom: -17px;
+  border: var(--border-bold);
+  border-bottom-left-radius: 70% 100%;
+  border-bottom-right-radius: 70% 100%;
+  background-color: var(--gumball-pink);
+  transform: rotate(4deg);
+  overflow: hidden;
+  z-index: 12;
+}
+.gumball__mouth--top::before,
+.gumball__mouth--top::after,
+.gumball__mouth--lower::before,
+.gumball__mouth--lower::after {
   z-index: 12;
 }
 .gumball__mouth--top::before {
@@ -920,26 +844,6 @@ body {
   top: 7px;
   left: 15px;
   transform: rotate(2deg);
-}
-.gumball__mouth--lower {
-  position: absolute;
-  width: 76px;
-  height: 70px;
-  left: 70px;
-  bottom: -17px;
-  border: var(--border-bold);
-  border-bottom-left-radius: 70% 100%;
-  border-bottom-right-radius: 70% 100%;
-  background-color: var(--gumball-pink);
-  transform: rotate(4deg);
-  overflow: hidden;
-  z-index: 12;
-}
-.gumball__mouth--lower::before,
-.gumball__mouth--lower::after {
-  content: '';
-  position: absolute;
-  z-index: 12;
 }
 .gumball__mouth--lower::before {
   width: 20px;
@@ -1029,8 +933,6 @@ body {
 }
 .gumball__flap::before,
 .gumball__flap::after {
-  content: '';
-  position: absolute;
   width: 4px;
   height: 20px;
   background-color: var(--color-black);
@@ -1049,10 +951,7 @@ body {
 .gumball__arm-2 {
   position: absolute;
   border: var(--border-bold);
-  border-top-left-radius: 45% 10%;
-  border-top-right-radius: 45% 10%;
-  border-bottom-left-radius: 45% 10%;
-  border-bottom-right-radius: 45% 10%;
+  border-radius: 45% 45% 45% 45% / 10% 10% 10% 10%;
   background-color: var(--gumball-brown-light);
 }
 .gumball__arm-1--upper {
@@ -1120,8 +1019,6 @@ body {
 .gumball__sleeve-end--1::after,
 .gumball__sleeve-end--2::before,
 .gumball__sleeve-end--2::after {
-  content: '';
-  position: absolute;
   height: 100%;
   width: 3px;
   background-color: var(--color-black);
@@ -1175,8 +1072,6 @@ body {
 }
 .gumball__paw-1 .gumball__main-paw::before,
 .gumball__paw-1 .gumball__main-paw::after {
-  content: '';
-  position: absolute;
   width: 3px;
   bottom: 0px;
   background-color: var(--color-black);
@@ -1243,8 +1138,6 @@ body {
 }
 .gumball__paw-2 .gumball__main-paw::before,
 .gumball__paw-2 .gumball__main-paw::after {
-  content: '';
-  position: absolute;
   width: 3px;
   bottom: 0px;
   background-color: var(--color-black);
@@ -1277,7 +1170,7 @@ body {
 
 .gumball__leg-1,
 .gumball__leg-2 {
-  height: 58px; /*69px;*/
+  height: 58px;
   width: 26px;
   background-color: var(--color-gray);
   box-shadow: inset 0 8px 3px rgb(0 0 0 / 40%);
@@ -1297,8 +1190,6 @@ body {
 }
 .gumball__leg-1::before,
 .gumball__leg-2::before {
-  content: '';
-  position: absolute;
   border: var(--border-bold);
   height: 20px;
   bottom: -9px;
@@ -1316,8 +1207,6 @@ body {
 
 .gumball__leg-1::after,
 .gumball__leg-2::after {
-  position: absolute;
-  content: '';
   width: 100%;
   height: 15px;
   border-top-left-radius: 50% 10%;
@@ -1354,8 +1243,6 @@ body {
 .gumball__foot-2::before,
 .gumball__foot-1::after,
 .gumball__foot-2::after {
-  content: '';
-  position: absolute;
   border-top: var(--border-bold);
   border-radius: 50%;
 }
