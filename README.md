@@ -4,4 +4,4 @@ This is a drawing of Gumball and Darwin from the cartoon series "The Amazing Wor
 
 ## Here is a screenshot of the design
 
-<img src="./preview.png"  />
+<img src="./preview.png" alt="preview"  />
