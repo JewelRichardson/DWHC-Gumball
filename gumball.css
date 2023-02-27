@@ -454,9 +454,11 @@ body {
 }
 .darwin__leg-1 {
   left: 136px;
+  box-shadow: inset 0 14px 2px 1px rgb(0 0 0 / 15%);
 }
 .darwin__leg-2 {
   right: 81px;
+  box-shadow: inset 0 14px 2px -1px rgb(0 0 0 / 15%);
 }
 .darwin__leg-1::before,
 .darwin__leg-2::before {
@@ -918,6 +920,7 @@ body {
   background-color: var(--color-gray);
   box-shadow: inset 0 -5px 5px rgb(0 0 0 / 40%);
   overflow: hidden;
+  z-index: 10;
 }
 
 .gumball__flap {
@@ -945,6 +948,19 @@ body {
 .gumball__flap::after {
   right: 2px;
   transform: rotate(-27deg);
+}
+
+.gumball__tail {
+  position: absolute;
+  top: 345px;
+  right: 83px;
+  width: 27px;
+  height: 82px;
+  border: var(--border-bold);
+  border-radius: 77% 74% 86% 78% / 60% 60% 99% 91%;
+  background-color: var(--gumball-blue);
+  box-shadow: inset 0 -13px 2px -2px rgb(0 0 0 / 50%);
+  transform: rotate(128deg);
 }
 
 .gumball__arm-1,
